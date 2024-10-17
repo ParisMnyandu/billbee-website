@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="style_bilbeee.css"/>
+    <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link 
+    href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap" 
+    rel="stylesheet"
+    />
+</head>
+<body>
+
+    <div class="container">
+        <div class="landing">
+            <nav class="navbar">
+                <div class="navigation">
+                    <a href="billbee.html"><img src="images/logo.png" class="logo-image"></a>
+                    </a>
+                    <a href="billbee.html" class="nav-item">Home</a>
+                    <a href="contact.html" class="nav-item">Contact</a>
+                </div>
+            </nav>
+            <div class="contact">
+                <h3>Please Fill In This Form</h3>
+                <p>Join our newsletter to be a part of the journey</p>
+                <form class="contact-form" onsubmit="return validateForm(event)">
+                    <div class="input-group">
+                        <input type="text" placeholder="First Name" id="firstName" required>
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" placeholder="Last Name" id="lastName" required>
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" placeholder="Restaurant Name" id="restaurantName" required>
+                        <i class="fa-solid fa-store"></i>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" placeholder="Email Address" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div class="btn-group">
+                        <button class="submit-btn" type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>            
+        </div>
+    </div>
+
+<!-- Confirmation Modal -->
+<div id="confirmationModal" class="modal">
+    <div class="modal-content">
+        <i class="fa fa-check check-icon"></i>
+        <p>Your details have been successfully sent!</p>
+        <button onclick="closeModal()">Close</button>
+    </div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
